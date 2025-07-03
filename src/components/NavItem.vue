@@ -1,5 +1,4 @@
 <script setup lang="ts">
-  import { defineProps } from "vue";
   const { to, pageName } = defineProps<{
     to: string;
     pageName: string;

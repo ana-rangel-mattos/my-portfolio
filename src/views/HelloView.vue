@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+  import CommentText from "@/components/CommentText.vue";
+</script>
 
 <template>
   <main class="flex flex-col items-center gap-10 p-4 sm:justify-center sm:gap-14 sm:p-0">
@@ -9,7 +11,7 @@
     </div>
 
     <div class="px-4 sm:w-1/2 sm:px-0">
-      <span class="text-base/normal">// Meu perfil no GitHub:</span>
+      <CommentText text="Meu perfil no GitHub:" />
       <p>
         <span class="font-medium text-indigo-500"
           >const <span class="font-medium text-teal-400">githubLink</span></span
