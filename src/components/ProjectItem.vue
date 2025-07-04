@@ -13,13 +13,16 @@
   }>();
 
   const portfolio = usePortifolioStore();
+
+  const projectIndex = portfolio.filteredProjects.indexOf(project) + 1;
+  const projectTitle = project.title.toLowerCase().split(" ").join("-");
 </script>
 
 <template>
   <div class="px-4 py-2 sm:px-10 sm:py-8">
     <div class="flex gap-2 pb-3 text-base">
-      <p class="font-medium text-indigo-500">{{ project.title }}</p>
-      <CommentText text="_portifólio-vue" />
+      <p class="font-medium text-indigo-500">Projeto {{ projectIndex }}</p>
+      <CommentText :text="`_${projectTitle}`" />
     </div>
     <div class="relative w-72 rounded-2xl border-2 bg-slate-950 pb-2">
       <div class="absolute top-4 right-4 flex gap-2">
@@ -27,7 +30,7 @@
           v-for="tech in project.technologies"
           :key="tech"
           :is="portfolio.getIconFromTech(tech).icon"
-          :class="`icon-lg ${portfolio.getIconFromTech(tech).bgColor} text-slate-950`"
+          :class="`icon-lg bg-slate-600 text-slate-950`"
         />
       </div>
       <div class="flex flex-col">

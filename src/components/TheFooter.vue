@@ -1,5 +1,6 @@
 <script setup lang="ts">
-  import { RiGithubFill, RiLinkedinFill } from "vue-remix-icons";
+  import StreamlineLogosGithubLogo2Solid from "~icons/streamline-logos/github-logo-2-solid";
+  import StreamlineLogosLinkedinLogoSolid from "~icons/streamline-logos/linkedin-logo-solid";
 </script>
 
 <template>
@@ -12,18 +13,18 @@
         target="_blank"
         class="contents"
       >
-        <RiLinkedinFill class="icon text-slate-100" />
+        <StreamlineLogosLinkedinLogoSolid class="icon text-slate-100" />
       </a>
 
       <a href="https://github.com/ana-rangel-mattos" target="_blank" class="contents">
-        <RiGithubFill class="icon text-slate-100" />
+        <StreamlineLogosGithubLogo2Solid class="icon text-slate-100" />
       </a>
     </div>
 
     <div class="flex pt-2 sm:pt-0">
       <a href="https://github.com/ana-rangel-mattos" target="_blank" class="contents">
         <p class="flex items-center justify-between pr-3 text-slate-100">@ana-rangel-mattos</p>
-        <RiGithubFill class="icon text-slate-100" />
+        <StreamlineLogosGithubLogo2Solid class="icon text-slate-100" />
       </a>
     </div>
   </footer>

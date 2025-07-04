@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import { usePortifolioStore } from "@/stores/PortfolioStore";
   import { onBeforeMount, ref, watch } from "vue";
-  import ProjectsTab from "./ProjectsTab.vue";
+  import PortfolioTab from "./PortfolioTab.vue";
   import TechnologyItem from "./TechnologyItem.vue";
 
   const portfolio = usePortifolioStore();
@@ -27,12 +27,12 @@
 
 <template>
   <div class="divide-y-1 border-b-1 md:border-b-0">
-    <ProjectsTab v-model="showTechnologies" />
+    <PortfolioTab v-model="showTechnologies" tab-name="projetos" />
     <div v-show="showTechnologies" class="flex flex-col gap-2 p-5">
       <TechnologyItem
         v-for="(tech, index) in portfolio.getTechnologies"
         :key="index"
-        :technology="tech"
+        :technology="getIconFromTech(tech).name"
         v-model="checkedTech"
         ><template #icon
           ><component
